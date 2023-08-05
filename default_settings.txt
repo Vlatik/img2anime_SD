@@ -1,0 +1,8 @@
+(masterpiece, best quality:1.4), (flat color:1.4),(colorful:1.4), eye contact, solo,floating colorful water,(2D:1.4),beautiful eyes,eyes detailed, closed mouth
+a ginger girl, red eyes
+0.5
+512
+1
+0
+1
+Ghibli=, <lora:studioGhibliStyle_offset:0.8>

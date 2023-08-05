@@ -24,8 +24,9 @@ def img2img(prompt, img):
     with open(prompt, "r") as text_file:
         lines = text_file.readlines()
 
-        pr = lines[0]
-        prc = lines[1]
+        style = lines[7].split('=', 1)[1]
+        pr = lines[0] + style
+        prc = lines[1] + style
         
         ds0 = lines[2]
         ds = float(ds0)
@@ -42,6 +43,7 @@ def img2img(prompt, img):
         else:
             h = res
             w = h * im.size[0]/im.size[1]
+
         
         ad = int(lines[4])
         if ad == 1:

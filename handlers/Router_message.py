@@ -40,6 +40,7 @@ async def search(message: types.Message, bot: Bot):
         ad = 'Adetailer Off'
         col = 'Colorize On'
     Cap = int(lines[6])
+    st = lines[7].split('=')[0]
     builder = InlineKeyboardBuilder()
     builder.add(types.InlineKeyboardButton(
         text = 'Redo',
@@ -49,6 +50,7 @@ async def search(message: types.Message, bot: Bot):
        Caption = (
                 f"User nickname:  {message.from_user.full_name}" + '\n' + '\n'
                 f'Prompt:  {PromptT}'
+                f'Style:  {st}' + '\n'
                 f'{ad},   ' + col + '\n'
                 f'Denoising strength:  {ds}'
                 f'Resolution:  {lines[3]}' + '\n'
@@ -81,6 +83,7 @@ async def search(callback: types.CallbackQuery):
         ad = 'Adetailer Off'
         col = 'Colorize On'
     Cap = int(lines[6])
+    st = lines[7].split('=')[0]
     builder = InlineKeyboardBuilder()
     builder.add(types.InlineKeyboardButton(
         text = 'Redo',
@@ -90,6 +93,7 @@ async def search(callback: types.CallbackQuery):
        Caption = (
                 f"User nickname:  {callback.from_user.full_name}" + '\n' + '\n'
                 f'Prompt:  {PromptT}'
+                f'Style:  {st}' + '\n'
                 f'{ad},   ' + col + '\n'
                 f'Denoising strength:  {ds}'
                 f'Resolution:  {lines[3]}' + '\n'
